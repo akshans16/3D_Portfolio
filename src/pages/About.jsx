@@ -1,5 +1,6 @@
+import "react-vertical-timeline-component/style.min.css";
 import CTA from "../components/CTA";
-import {skills} from "../constants";
+import {skills, projects} from "../constants";
 
 const About = () => {
     return (
@@ -10,13 +11,22 @@ const About = () => {
 
             <div className="mt-5 flex flex-col gap-3 text-slate-500">
                 <p>
-                    Software Engineer based in India, specializing in technical education through hands-on learning
-                    and building applications.
+                    I’m a Software Engineer who loves turning ideas into real, working applications. I focus on learning
+                    by doing, building projects that not only solve problems but also help others explore and grow in
+                    tech along the way.
                 </p>
             </div>
 
             <div className="py-10 flex flex-col">
                 <h3 className="subhead-text">My Skills</h3>
+                <div className="mt-5 flex flex-col gap-3 text-slate-500">
+                    <p>
+                        I love experimenting with new tech and bringing ideas to life through code. I’ve picked up a mix
+                        of skills in programming, web development, and problem-solving along the way. I’m always
+                        learning something new, improving how I write code, and finding better ways to build cool and
+                        useful stuff.
+                    </p>
+                </div>
 
                 <div className="mt-16 flex flex-wrap gap-12">
                     {skills.map((skill) => (
@@ -28,69 +38,6 @@ const About = () => {
                         </div>
                     ))}
                 </div>
-            </div>
-
-
-            // TODO: ADD Projects to the timeline
-
-            <div className="py-16">
-                <h3 className="subhead-text">Work Experience.</h3>
-                <div className="mt-5 flex flex-col gap-3 text-slate-500">
-                    {/* <p>
-                        I've worked with all sorts of companies, leveling up my skills and teaming up with smart people.
-                        Here's the rundown:
-                    </p> */}
-                </div>
-
-                {/* <div className='mt-12 flex'>
-          <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <VerticalTimelineElement
-                key={experience.company_name}
-                date={experience.date}
-                iconStyle={{ background: experience.iconBg }}
-                icon={
-                  <div className='flex justify-center items-center w-full h-full'>
-                    <img
-                      src={experience.icon}
-                      alt={experience.company_name}
-                      className='w-[60%] h-[60%] object-contain'
-                    />
-                  </div>
-                }
-                contentStyle={{
-                  borderBottom: "8px",
-                  borderStyle: "solid",
-                  borderBottomColor: experience.iconBg,
-                  boxShadow: "none",
-                }}
-              >
-                <div>
-                  <h3 className='text-black text-xl font-poppins font-semibold'>
-                    {experience.title}
-                  </h3>
-                  <p
-                    className='text-black-500 font-medium text-base'
-                    style={{ margin: 0 }}
-                  >
-                    {experience.company_name}
-                  </p>
-                </div>
-
-                <ul className='my-5 list-disc ml-5 space-y-2'>
-                  {experience.points.map((point, index) => (
-                    <li
-                      key={`experience-point-${index}`}
-                      className='text-black-500/50 font-normal pl-1 text-sm'
-                    >
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </VerticalTimelineElement>
-            ))}
-          </VerticalTimeline>
-        </div> */}
             </div>
 
             <hr className="border-slate-200" />

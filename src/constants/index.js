@@ -1,24 +1,17 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import {mortarboard,program,mental_health,keyboard} from "../assets/images";
 import {
-    car,
     contact,
     css,
-    estate,
-    
     git,
     github,
     html,
     javascript,
     linkedin,
-    
-    pricewise,
     react,
     redux,
-    
-    snapgram,
-    summiz,
     tailwindcss,
-    threads
+    java,
+    sql,
 } from "../assets/icons";
 
 export const skills = [
@@ -53,6 +46,16 @@ export const skills = [
         type: "State Management",
     },
     {
+        imageUrl: java,
+        name: "Java",
+        type: "Programming Language",
+    },
+    {
+        imageUrl: sql,
+        name: "SQL",
+        type: "DBMS",
+    },
+    {
         imageUrl: git,
         name: "Git",
         type: "Version Control",
@@ -64,120 +67,84 @@ export const skills = [
     },
 ];
 
-export const experiences = [
+export const projects = [
     {
         title: "University Management System",
-        company_name: "Java, SQL, JDBC, Swing, OOP, Database Integration",
-        icon: starbucks,
+        tags: "Java, SQL, JDBC, Swing, OOP, Database Integration",
+        icon: mortarboard,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date:"Feb 2024 - March 2024",
+        
         points: [
             "Developed a University Management System in Java to manage student, faculty, and course information efficiently.",
             "Implemented CRUD operations for user data using Java and SQL for database connectivity.",
             "Designed a modular structure with clear separation between data handling, business logic, and user interface.",
             "Enhanced system usability with role-based access for administrators, teachers, and students.",
         ],
+        github:'https://github.com/akshans16/University-Management-System-repo',
+    },
+     {
+        title: "Typing Efficiency Analyzer",
+        tags: "HTML, CSS, JS, Responsive Design, Real Time Calculation",
+        icon: keyboard,
+        iconBg: "#b7e4c7",
+         date: "Jan 2025 - Feb 2025",
+        points: [
+            "Designed and developed a Typing Speed Test web application using HTML, CSS, and JavaScript to measure typing speed and accuracy.",
+            "Implemented real-time WPM calculation, accuracy tracking, and dynamic paragraph generation for an interactive user experience.",
+            "Focused on responsive design and clean UI to ensure usability across devices.",
+            "Applied DOM manipulation and front-end best practices to create a smooth and engaging interface.",
+        ],
+        github:'https://github.com/akshans16/Typing-Speed-Test',
+        live:'https://effervescent-lolly-3bf738.netlify.app/'
     },
     {
         title: "MindEase",
-        company_name: "HTML, CSS, JavaScript, React.js, Firebase Database Integration",
-        icon: tesla,
+        tags: "HTML, CSS, JavaScript, React.js, Firebase Database Integration",
+        icon: mental_health,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "July 2025 - Aug 2025",
+
         points: [
             "Collaboratively designed and developed MindEase – Stress Management Web Application using React.js, aimed at promoting mental wellness and relaxation.",
             "Implemented interactive features such as mood tracker, breathing exercises, meditation tools, motivational stories, movie recommendations, casual games, and nature soundscapes.",
             "Followed a modular and scalable architecture for efficient component management and future feature integration.",
             "Built a responsive and engaging user interface to ensure seamless performance across devices and enhance user interaction.",
         ],
+        github:'https://github.com/akshans16/Mindease',
+        live:'https://mindease1612.netlify.app/'
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        title: "3D Portfolio",
+        tags: "React.js, Three.js, @react-three/fiber, @react-three/drei, 3D Animation",
+        icon: program,
         iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        date: "Oct 2025 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Designing and developing an interactive 3D portfolio using React.js, Three.js, and @react-three/fiber.",
+            "Integrating dynamic 3D models, animations, and effects to showcase projects and skills.",
+            "Implementing responsive layouts and smooth performance across devices and browsers.",
         ],
+        github:'https://github.com/akshans16/3D_Portfolio',
+        live:''
     },
+   
 ];
 
 export const socialLinks = [
     {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
-    },
-    {
-        name: 'GitHub',
+        name: "GitHub",
         iconUrl: github,
-        link: 'https://github.com/akshans16',
+        link: "https://github.com/akshans16",
     },
     {
-        name: 'LinkedIn',
+        name: "LinkedIn",
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/akshansh-khare',
-    }
-];
-
-export const projects = [
-    {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        link: "https://www.linkedin.com/in/akshansh-khare",
     },
     {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: "Contact",
+        iconUrl: contact,
+        link: "/contact",
     },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
 ];
