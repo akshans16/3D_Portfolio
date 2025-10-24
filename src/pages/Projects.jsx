@@ -2,6 +2,7 @@ import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline
 import {githubIcon, live} from "../assets/images";
 import CTA from '../components/CTA'
 import {projects} from "../constants";
+
 const Projects = () => {
     return (
         <div className="max-container">
