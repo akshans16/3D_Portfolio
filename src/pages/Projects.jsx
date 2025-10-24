@@ -58,7 +58,7 @@ const Projects = () => {
                             <div className="flex gap-3 mt-4">
                                 {project.github && (
                                     <a
-                                        href={project.live}
+                                        href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="px-4 py-2 bg-[#475472] text-white rounded-xl text-sm 
@@ -87,6 +87,7 @@ const Projects = () => {
                     ))}
                 </VerticalTimeline>
             </div>
+            <div className="mt-10"/>
             <hr className="border-slate-200" />
 
             <CTA />
