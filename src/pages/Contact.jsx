@@ -22,42 +22,7 @@ const Contact = () => {
     const handleBlur = () => {
       setCurrentAnimation('idle');
     };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setIsLoading(true);
-        setCurrentAnimation('hit');
-        emailjs
-        .send(
-            import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-
-            import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-            {
-                from_name: form.name,
-                to_name: "Akshansh",
-                from_email: form.email,
-                to_email: "youmarcos7974@gmail.com",
-                message: form.message,
-            },
-            import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-        )
-        .then(() => {
-            setIsLoading(false);
-            // TODO: Show success message
-            // TODO: Hide an alert
-            setform({name: "", email: "", message: ""});
-            setTimeout(() => {
-              setCurrentAnimation('idle')
-               setform({name: "", email: "", message: ""});
-            }, 3000);
-        })
-        .catch((error) => {
-          setCurrentAnimation('idle');
-            setIsLoading(false);
-            console.log(error);
-            // TODO: Show error message
-        });
-
-    };
+    
 
     return (
         <section className="relative flex lg:flex-row flex-col max-container">
