@@ -5,14 +5,14 @@ import {Canvas} from "@react-three/fiber";
 import Fox from "../models/Fox";
 import useAlert from "../../hooks/useAlert";
 import Loader from "../components/Loader";
-import Alert from "../components/Alert"
+import Alert from "../components/Alert";
 
 const Contact = () => {
     const formRef = useRef(null);
     const [form, setform] = useState({name: "", email: "", message: ""});
 
     const [isLoading, setIsLoading] = useState(false);
-    const { alert, showAlert, hideAlert } = useAlert();
+    const {alert, showAlert, hideAlert} = useAlert();
 
     const [currentAnimation, setCurrentAnimation] = useState("idle");
 
@@ -79,7 +79,8 @@ const Contact = () => {
 
     return (
         <section className="relative flex lg:flex-row flex-col max-container">
-            {alert.show && <Alert {...alert} />}
+            <div className="fixed top-12 left-1/2 transform -translate-x-1/2 z-50">{alert.show && <Alert {...alert} />}</div>
+            
             <div className="flex-1 min-w-[50%] flex flex-col">
                 <h1 className="head-text">Get in touch</h1>
                 <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-7 mt-14">
