@@ -30,18 +30,18 @@ export function Island({isRotating, setIsRotating, setCurrentStage, currentFocus
     const dampingFactor = 0.95;
 
     // Handle scroll -> control island via scrolling
-    useEffect(() => {
-        const handleScroll = (event) => {
-            const delta = event.deltaY * 0.001; // sensitivity
-            if (islandRef.current) {
-                setIsRotating(true);
-                islandRef.current.rotation.y += delta; // rotate island
-            }
-        };
+    // useEffect(() => {
+    //     const handleScroll = (event) => {
+    //         const delta = event.deltaY * 0.001; // sensitivity
+    //         if (islandRef.current) {
+    //             setIsRotating(true);
+    //             islandRef.current.rotation.y += delta; // rotate island
+    //         }
+    //     };
 
-        window.addEventListener("wheel", handleScroll);
-        return () => window.removeEventListener("wheel", handleScroll);
-    }, []);
+    //     window.addEventListener("wheel", handleScroll);
+    //     return () => window.removeEventListener("wheel", handleScroll);
+    // }, []);
 
     // Handle pointer (mouse or touch) down event
     const handlePointerDown = (event) => {

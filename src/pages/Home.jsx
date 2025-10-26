@@ -12,6 +12,8 @@ import {soundoff, soundon} from "../assets/icons";
 
 import SocialLinksBar from "../components/SocialLinksBar";
 
+import AboutBox from "../components/AboutBox";
+
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));
     audioRef.current.volume = 0.4;
@@ -102,6 +104,11 @@ const Home = () => {
             {/* Social Links */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
                 <SocialLinksBar/>
+            </div>
+
+            {/* About box */}
+            <div className="top-20 left-4/5">
+                <AboutBox/>
             </div>
         </section>
     );
