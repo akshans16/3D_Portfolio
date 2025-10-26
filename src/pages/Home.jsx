@@ -10,6 +10,8 @@ import HomeInfo from "../components/HomeInfo";
 import sakura from "../assets/sakura.mp3";
 import {soundoff, soundon} from "../assets/icons";
 
+import SocialLinksBar from "../components/SocialLinksBar";
+
 const Home = () => {
     const audioRef = useRef(new Audio(sakura));
     audioRef.current.volume = 0.4;
@@ -61,7 +63,7 @@ const Home = () => {
     const [planeScale, planePosition] = adjustPlaneForScreenSize();
 
     return (
-        <section className="outline w-full h-screen relative">
+        <section className=" w-full h-screen relative">
             {/* Popup */}
             <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
                 {currentStage && <HomeInfo currentStage={currentStage} />}
@@ -96,6 +98,10 @@ const Home = () => {
                     className="w-10 h-10 cursor-pointer object-contain"
                     onClick={() => setIsPlayingMusic(!isPlayingMusic)}
                 />
+            </div>
+            {/* Social Links */}
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+                <SocialLinksBar/>
             </div>
         </section>
     );

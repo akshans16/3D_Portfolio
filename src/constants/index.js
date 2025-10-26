@@ -1,4 +1,4 @@
-import {mortarboard,program,mental_health,keyboard} from "../assets/images";
+import {mortarboard,program,mental_health,keyboard,github_blue} from "../assets/images";
 import {
     contact,
     css,
@@ -134,7 +134,7 @@ export const projects = [
 export const socialLinks = [
     {
         name: "GitHub",
-        iconUrl: github,
+        iconUrl: github_blue,
         link: "https://github.com/akshans16",
     },
     {
